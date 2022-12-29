@@ -10,63 +10,63 @@
 		<h1>作为文明人，不能说脏话</h1>
 	    	<h1>写你的作业去吧</h1>
 		<!--img src="https://q1.qlogo.cn/g?b=qq&nk=2644883802&s=640" width="1000px" height="1000px" -->
-		<p>#include <bits/stdc++.h>
-using namespace std;
+		<p>#include <bits/stdc++.h></p>
+		<p>"using namespace std;
 
-string p[10001];
-long long cnt;
-int n=1;
+		string p[10001];
+		long long cnt;
+		int n=1;
 
 
-string _clar(string k) {
-	for(int j=0;j<k.size();)
-    {
-    	if(j>=k.size()) break;
-        if(k[j]=='<')
-		{
-			if(j==0)
-			k.erase(j,1);
-			else
-			{
-        		k.erase(j-1,2);
-        		j--;
-			}
+		string _clar(string k) {
+			for(int j=0;j<k.size();)
+		    {
+			if(j>=k.size()) break;
+			if(k[j]=='<')
+				{
+					if(j==0)
+					k.erase(j,1);
+					else
+					{
+					k.erase(j-1,2);
+					j--;
+					}
+				}
+			else j++;
+		    }
+		    return k;
 		}
-        else j++;
-    }
-    return k;
-}
 
-int main()
-{
-    while(1)
-    {
-        string a;
-        getline(cin,a);
-        // a.erase(a.size()-1,1);
-        if(a=="EOF")break;
-        p[n++]=_clar(a);
-    }
-    int i=0;
-    while(1)
-    {
-        i++;
-        string k;
-        getline(cin,k);
-        // k.erase(k.size()-1,1);
-        if(k=="EOF")break;
-        
-        k=_clar(k);
+		int main()
+		{
+		    while(1)
+		    {
+			string a;
+			getline(cin,a);
+			// a.erase(a.size()-1,1);
+			if(a=="EOF")break;
+			p[n++]=_clar(a);
+		    }
+		    int i=0;
+		    while(1)
+		    {
+			i++;
+			string k;
+			getline(cin,k);
+			// k.erase(k.size()-1,1);
+			if(k=="EOF")break;
 
-        for(int j=0;j<min(p[i].size(),k.size());j++)
-        {
-            if(k[j]==p[i][j])
-                cnt++;
-        }
-    }
-    long long t;
-    cin>>t;
-    cout<<int(cnt*60.0/t+0.5);
-}</p>
+			k=_clar(k);
+
+			for(int j=0;j<min(p[i].size(),k.size());j++)
+			{
+			    if(k[j]==p[i][j])
+				cnt++;
+			}
+		    }
+		    long long t;
+		    cin>>t;"</p>
+		<p> cout<<int(cnt*60.0/t+0.5);</p>
+		<p>}</p>
 	</body>
 </html>
